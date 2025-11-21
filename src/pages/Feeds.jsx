@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProfileCard from '../components/ProfileCard'
 import Card from '../components/Card'
 import user from '../assets/user1.png'
@@ -7,8 +7,12 @@ import ImageIcon from '@mui/icons-material/Image';
 import DescriptionIcon from '@mui/icons-material/Description';
 import Advertisment from '../components/Advertisment';
 import Post from '../components/Post';
+import Modal from '../components/Modal';
 
 const Feeds = () => {
+
+    const [addPostModal,setAddPostModal] = useState(false);
+
     return (
         <div className='px-5 xl:px-50 py-9 flex gap-5 w-full mt-5 bg-gray-100'>
 
@@ -105,9 +109,8 @@ const Feeds = () => {
                 <div className='my-5 sticky top-15'>
                     <Advertisment />
                 </div>
-
             </div>
-
+            
         </div>
     )
 }
